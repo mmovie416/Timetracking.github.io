@@ -1,0 +1,913 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	--Blue: hsl(246, 80%, 60%);
+	--Soft-red: hsl(15, 100%, 70%); /* work */
+	--Soft-blue: hsl(195, 74%, 62%); /* play */
+	--Light-red: hsl(348, 100%, 68%); /* study */
+	--Lime-green: hsl(145, 58%, 55%); /* exercise */
+	--Violet: hsl(264, 64%, 52%); /* social */
+	--Soft-orange: hsl(43, 84%, 65%); /* self care */
+	--Very-dark-blue: hsl(226, 43%, 10%);
+	--Dark-blue: hsl(235, 46%, 20%);
+	--Desaturated-blue: hsl(235, 45%, 61%);
+	--Pale-blue: hsl(236, 100%, 87%);
+
+}
+
+		body{
+			place-content: center;
+			display: grid;
+			min-height: 100vh;
+			background-color: var(--Very-dark-blue);
+		}
+
+		.container{
+			display: grid;
+			margin-top: 7%;
+		}
+
+		.content{
+			margin: auto;
+			display: grid;
+			grid-template-areas: 'report '
+								 'cards';
+			max-width: 100%;
+			place-content: center;
+		}
+
+		.report{
+			background-color: var(--Dark-blue);
+			width: 85%;
+			border: 1px solid var(--Dark-blue);
+			border-radius: 1rem;
+			height: 13rem;
+			grid-area: report;
+			margin: auto;
+		}
+
+		.report .Jeremy{
+			background-color: var(--Blue);
+			width: 100%;
+			height: 9rem;
+			border-radius: 1rem;
+		}
+
+		.report .JeremyContent{
+			padding: 9%;
+			display: flex;
+		}
+
+		.report .JeremyContent .name span, .report .JeremyContent .name h1{
+			font-family: 'Rubik',sans-serif;
+		}
+
+		.report .JeremyContent .name{
+			margin-left: 5%;
+		}
+
+		.report .JeremyContent .name h1{
+			color: white;
+			width: 15rem;
+			font-size: 1.5rem;
+		}
+
+
+		.report .JeremyContent span{
+			color: var(--Pale-blue);
+		}
+
+		.report .Jeremy img{
+			width: 25%;
+			height: 25%;
+			border: 3px solid white;
+			border-radius: 50%;
+			margin-bottom: 15%;
+		}
+
+		.report .time{
+			color: white;
+			width: 100%;
+		}
+
+		.report .time ul{
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			justify-content: center;
+
+		}
+
+		.report .time ul li{	
+			list-style: none;
+			padding: 5%;
+			font-family: 'Rubik',sans-serif;
+
+		}
+
+		.report .time ul li:hover{
+			cursor: pointer;
+		}
+
+		.cards{
+			display: grid;
+			grid-template-areas: ' cardWorkBg '
+								  'cardPlayBg' 
+								  'cardStudyBg'
+								'cardExerciseBg'  
+								'cardSocialBg' 
+								'cardSelfCareBg';
+			grid-area: cards;
+			grid-gap: 5%;	
+			width: 85%;	
+			margin-top: 5%;
+			margin-left: auto;
+			margin-right: auto;
+
+		}
+
+		.cardWorkBg{
+			background-color: var(--Soft-red);
+			width: 100%;
+			border-radius: 1rem;
+			grid-area: cardWorkBg;
+		}
+
+		.cardWorkBg img{
+			margin-left: 65%;
+		}
+
+		.cardWork{
+			background-color: var(--Dark-blue);
+			color: white;
+			width: 100%;
+			height: 9rem;
+			padding: 3%;
+			border-radius: 1rem;
+			font-family: 'Rubik',sans-serif;
+			display: flex;
+			position: relative;
+			top: 3.5%;
+		}
+
+		
+
+		.cardWork div:nth-child(4) span{
+			color: var(--Pale-blue);
+			position: absolute;
+			top: 71%;
+			left: 47%;
+		}
+
+		.cardWork span:nth-child(1){
+			position: absolute;
+			top: 11%;
+			left: 7%;
+		}
+
+		.cardWork #workId h1{
+			position: absolute;
+			top: 61%;
+			left: 5%;
+		}
+
+		.cardWork svg{
+			position: absolute;
+			left: 85%;
+			color: var(--Pale-blue);
+			top: 13%;
+		}
+
+		/*Play*/
+
+		.cardPlayBg{
+			background-color: var(--Soft-blue);
+			width: 100%;
+			border-radius: 1rem;
+			grid-area: cardPlayBg;
+		}
+
+		.cardPlayBg img{
+			margin-left: 65%;
+		}
+
+		.cardPlay{
+			background-color: var(--Dark-blue);
+			color: white;
+			width: 100%;
+			height: 9rem;
+			padding: 3%;
+			border-radius: 1rem;
+			font-family: 'Rubik',sans-serif;
+			display: flex;
+			position: relative;
+			top: 3.5%;
+		}
+
+		.cardPlay div:nth-child(4) span{
+			color: var(--Pale-blue);
+			position: absolute;
+			top: 71%;
+			left: 47%;
+		}
+
+		.cardPlay span:nth-child(1){
+			position: absolute;
+			top: 11%;
+			left: 7%;
+		}
+
+		.cardPlay #playId h1{
+			position: absolute;
+			top: 61%;
+			left: 5%;
+		}
+
+		.cardPlay svg{
+			position: absolute;
+			left: 85%;
+			color: var(--Pale-blue);
+			top: 13%;
+		}
+
+
+		/*Study*/
+
+		.cardStudyBg{
+			background-color: var(--Light-red);
+			width: 100%;
+			border-radius: 1rem;
+			grid-area: cardStudyBg;
+		}
+
+		.cardStudyBg img{
+			margin-left: 65%;
+		}
+
+		.cardStudy{
+			background-color: var(--Dark-blue);
+			color: white;
+			width: 100%;
+			height: 9rem;
+			padding: 3%;
+			border-radius: 1rem;
+			font-family: 'Rubik',sans-serif;
+			display: flex;
+		/*	flex-direction: column;*/
+			position: relative;
+			top: 3.5%;
+		}
+
+		.cardStudy div:nth-child(4) span{
+			color: var(--Pale-blue);
+			position: absolute;
+			top: 71%;
+			left: 47%;
+		}
+
+		.cardStudy span:nth-child(1){
+			position: absolute;
+			top: 11%;
+			left: 7%;
+		}
+
+		.cardStudy #studyId h1{
+			position: absolute;
+			top: 61%;
+			left: 5%;
+		}
+
+		.cardStudy svg{
+			position: absolute;
+			left: 85%;
+			color: var(--Pale-blue);
+			top: 13%;
+		}
+
+		/*Exercise*/
+
+		.cards .bottom{
+			position: relative;
+		}
+
+		.cardExerciseBg{
+			background-color: var(--Lime-green);
+			width: 100%;
+			border-radius: 1rem;
+			grid-area: cardExerciseBg;
+			
+		}
+
+		.cardExerciseBg img{
+			margin-left: 65%;
+		}
+
+		.cardExercise{
+			background-color: var(--Dark-blue);
+			color: white;
+			width: 100%;
+			height: 9rem;
+			border-radius: 1rem;
+			font-family: 'Rubik',sans-serif;
+			display: flex;
+			position: absolute;
+			top: 21%;
+			
+		}
+
+		.cardExercise div:nth-child(4) span{
+			color: var(--Pale-blue);
+			position: absolute;
+			top: 71%;
+			left: 47%;
+		}
+
+		.cardExercise span:nth-child(1){
+			position: absolute;
+			top: 11%;
+			left: 7%;
+		}
+
+		.cardExercise #exerciseId h1{
+			position: absolute;
+			top: 61%;
+			left: 5%;
+		}
+
+		.cardExercise svg{
+			position: absolute;
+			left: 85%;
+			color: var(--Pale-blue);
+			top: 13%;
+		}
+
+
+		/*Social*/
+
+		.cardSocialBg{
+			background-color: var(--Violet);
+			width: 100%;
+			border-radius: 1rem;
+			grid-area: cardSocialBg;
+			
+		}
+
+		.cardSocialBg img{
+			margin-left: 65%;
+		}
+
+		.cardSocial{
+			background-color: var(--Dark-blue);
+			color: white;
+			width: 100%;
+			height: 9rem;
+			border-radius: 1rem;
+			font-family: 'Rubik',sans-serif;
+			display: flex;
+			position: absolute;
+			top: 63%;
+		}
+
+		.cardSocial div:nth-child(4) span{
+			color: var(--Pale-blue);
+			position: absolute;
+			top: 71%;
+			left: 47%;
+		}
+
+		.cardSocial span:nth-child(1){
+			position: absolute;
+			top: 11%;
+			left: 7%;
+		}
+
+		.cardSocial #socialId h1{
+			position: absolute;
+			top: 61%;
+			left: 5%;
+		}
+
+		.cardSocial svg{
+			position: absolute;
+			left: 85%;
+			color: var(--Pale-blue);
+			top: 13%;
+		}
+
+
+		/*Self Care*/
+
+		.cardSelfCareBg{
+			background-color: var(--Soft-orange);
+			width: 100%;
+			border-radius: 1rem;
+			grid-area: cardSelfCareBg;
+			
+		}
+
+		.cardSelfCareBg img{
+			margin-left: 65%;
+		}
+
+		.cardSelfCare{
+			background-color: var(--Dark-blue);
+			color: white;
+			width: 100%;
+			height: 9rem;
+			border-radius: 1rem;
+			font-family: 'Rubik',sans-serif;
+			display: flex;
+			position: absolute;
+			top: 31%;
+		}
+
+		.cardSelfCare div:nth-child(4) span{
+			color: var(--Pale-blue);
+			position: absolute;
+			top: 71%;
+			left: 47%;
+		}
+
+		.cardSelfCare span:nth-child(1){
+			position: absolute;
+			top: 11%;
+			left: 7%;
+		}
+
+		.cardSelfCare #selfId h1{
+			position: absolute;
+			top: 61%;
+			left: 5%;
+		}
+
+		.cardSelfCare svg{
+			position: absolute;
+			left: 85%;
+			color: var(--Pale-blue);
+			top: 13%;
+		}
+
+		.top{
+			height: 10rem;
+		}
+
+		.top div{
+			margin-top: -15%;
+		}
+
+		.bottom{
+			height: 10rem;
+		}
+
+		.bottom:nth-child(5) div{
+			margin-top: -16%;
+		}
+
+		.bottom:nth-child(6) div{
+			margin-top: -3%;
+		}
+
+
+@media only screen and (min-width:768px){
+	
+
+		body{
+			place-content: center;
+			display: grid;
+			min-height: 100vh;
+			background-color: var(--Very-dark-blue);
+		}
+
+		.content{
+			display: grid;
+			grid-template-areas: 'report cards';
+			max-width: 45rem;
+			
+		}
+
+		.report{
+			background-color: var(--Dark-blue);
+			width: 15rem;
+			border: 1px solid var(--Dark-blue);
+			border-radius: 1rem;
+			height: 24.5rem;
+			grid-area: report;
+		}
+
+		.report .Jeremy{
+			background-color: var(--Blue);
+			width: 15rem;
+			height: 17rem;
+			border-radius: 1rem;
+		}
+
+		.report .JeremyContent{
+			padding: 9%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.report .JeremyContent .name span, .report .JeremyContent .name h1{
+			font-family: 'Rubik',sans-serif;
+		}
+
+		.report .JeremyContent .name h1{
+			color: white;
+			width: 11rem;
+		}
+
+
+		.report .JeremyContent span{
+			color: var(--Pale-blue);
+		}
+
+		.report .Jeremy img{
+			width: 35%;
+			height: 35%;
+			border: 3px solid white;
+			border-radius: 50%;
+			margin-bottom: 15%;
+		}
+
+		.report .time{
+			color: white;
+			width: 7rem;
+			padding: 1%;	
+		}
+
+		.report .time ul{
+			display: flex;
+			flex-direction: column;
+			margin-top: 11%;
+			left: 15%;
+		}
+
+		.report .time ul li{
+			list-style: none;
+			padding: 7%;
+			font-family: 'Rubik',sans-serif;
+		}
+
+		.report .time ul li:hover{
+			cursor: pointer;
+		}
+
+		.cards{
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 1%;
+			display: grid;
+			grid-template-areas: ' cardWorkBg cardPlayBg cardStudyBg'
+								'  cardExerciseBg  cardSocialBg cardSelfCareBg';
+			grid-area: cards;
+			grid-gap: 3%;						
+		}
+
+		.cardWorkBg{
+			background-color: var(--Soft-red);
+			width: 17rem;
+			border-radius: 1rem;
+			grid-area: cardWorkBg;
+		}
+
+		.cardWorkBg img{
+			margin-left: 65%;
+		}
+
+		.cardWork{
+			background-color: var(--Dark-blue);
+			color: white;
+			width: 17rem;
+			height: 9rem;
+			padding: 3%;
+			border-radius: 1rem;
+			font-family: 'Rubik',sans-serif;
+			display: flex;
+			position: relative;
+			top:-2%;
+		}
+
+		.cardWork div:nth-child(4) span{
+			color: var(--Pale-blue);
+			position: absolute;
+			top: 71%;
+			left: 15%;
+		}
+
+
+
+		.cardWork span:nth-child(1){
+			position: absolute;
+			top: 11%;
+			left: 15%;
+		}
+
+		.cardWork #workId h1{
+			position: absolute;
+			top: 45%;
+			left: 15%;
+		}
+
+		.cardWork svg{
+			position: absolute;
+			left: 75%;
+			color: var(--Pale-blue);
+			top: 13%;
+		}
+
+		/*Play*/
+
+		.cardPlayBg{
+			background-color: var(--Soft-blue);
+			width: 17rem;
+			border-radius: 1rem;
+			grid-area: cardPlayBg;
+		}
+
+		.cardPlayBg img{
+			margin-left: 65%;
+		}
+
+		.cardPlay{
+			background-color: var(--Dark-blue);
+			color: white;
+			width: 17rem;
+			height: 9rem;
+			padding: 3%;
+			border-radius: 1rem;
+			font-family: 'Rubik',sans-serif;
+			display: flex;
+			position: relative;
+			top:-2%;
+		}
+
+		.cardPlay div:nth-child(4) span{
+			color: var(--Pale-blue);
+			position: absolute;
+			top: 71%;
+			left: 15%;
+		}
+
+		.cardPlay span:nth-child(1){
+			position: absolute;
+			top: 11%;
+			left: 15%;
+		}
+
+		.cardPlay #playId h1{
+			position: absolute;
+			top: 45%;
+			left: 15%;
+		}
+
+		.cardPlay svg{
+			position: absolute;
+			left: 75%;
+			color: var(--Pale-blue);
+			top: 13%;
+		}
+
+
+		/*Study*/
+
+		.cardStudyBg{
+			background-color: var(--Light-red);
+			width: 17rem;
+			border-radius: 1rem;
+			grid-area: cardStudyBg;
+		}
+
+		.cardStudyBg img{
+			margin-left: 65%;
+		}
+
+		.cardStudy{
+			background-color: var(--Dark-blue);
+			color: white;
+			width: 17rem;
+			height: 9rem;
+			padding: 3%;
+			border-radius: 1rem;
+			font-family: 'Rubik',sans-serif;
+			display: flex;
+			position: relative;
+			top:-2%;
+		}
+
+		.cardStudy div:nth-child(4) span{
+			color: var(--Pale-blue);
+			position: absolute;
+			top: 71%;
+			left: 15%;
+		}
+
+		.cardStudy span:nth-child(1){
+			position: absolute;
+			top: 11%;
+			left: 15%;
+		}
+
+		.cardStudy #studyId h1{
+			position: absolute;
+			top: 45%;
+			left: 15%;
+		}
+
+		.cardStudy svg{
+			position: absolute;
+			left: 75%;
+			color: var(--Pale-blue);
+			top: 13%;
+		}
+
+		/*Exercise*/
+
+		.cards .bottom{
+			position: relative;
+		}
+
+		.cardExerciseBg{
+			background-color: var(--Lime-green);
+			width: 17rem;
+			border-radius: 1rem;
+			grid-area: cardExerciseBg;
+			
+		}
+
+		.cardExerciseBg img{
+			margin-left: 65%;
+		}
+
+		.cardExercise{
+			background-color: var(--Dark-blue);
+			color: white;
+			width: 17rem;
+			height: 9rem;
+			border-radius: 1rem;
+			font-family: 'Rubik',sans-serif;
+			display: flex;
+			position: absolute;
+			top: 25%;
+			
+		}
+
+		.cardExercise div:nth-child(4) span{
+			color: var(--Pale-blue);
+			position: absolute;
+			top: 71%;
+			left: 15%;
+		}
+
+		.cardExercise span:nth-child(1){
+			position: absolute;
+			top: 11%;
+			left: 15%;
+		}
+
+		.cardExercise #exerciseId h1{
+			position: absolute;
+			top: 45%;
+			left: 15%;
+		}
+
+		.cardExercise svg{
+			position: absolute;
+			left: 75%;
+			color: var(--Pale-blue);
+			top: 13%;
+		}
+
+
+		/*Social*/
+
+		.cardSocialBg{
+			background-color: var(--Violet);
+			width: 17rem;
+			border-radius: 1rem;
+			grid-area: cardSocialBg;
+			
+		}
+
+		.cardSocialBg img{
+			margin-left: 65%;
+		}
+
+		.cardSocial{
+			background-color: var(--Dark-blue);
+			color: white;
+			width: 17rem;
+			height: 9rem;
+			border-radius: 1rem;
+			font-family: 'Rubik',sans-serif;
+			display: flex;
+			position: absolute;
+			top: 53%;
+		}
+
+		.cardSocial div:nth-child(4) span{
+			color: var(--Pale-blue);
+			position: absolute;
+			top: 71%;
+			left: 15%;
+		}
+
+		.cardSocial span:nth-child(1){
+			position: absolute;
+			top: 11%;
+			left: 15%;
+		}
+
+		.cardSocial #socialId h1{
+			position: absolute;
+			top: 45%;
+			left: 15%;
+		}
+
+		.cardSocial svg{
+			position: absolute;
+			left: 75%;
+			color: var(--Pale-blue);
+			top: 13%;
+		}
+
+
+		/*Self Care*/
+
+		.cardSelfCareBg{
+			background-color: var(--Soft-orange);
+			width: 17rem;
+			border-radius: 1rem;
+			grid-area: cardSelfCareBg;
+			
+		}
+
+		.cardSelfCareBg img{
+			margin-left: 65%;
+		}
+
+		.cardSelfCare{
+			background-color: var(--Dark-blue);
+			color: white;
+			width: 17rem;
+			height: 9rem;
+			border-radius: 1rem;
+			font-family: 'Rubik',sans-serif;
+			display: flex;
+			position: absolute;
+			top: 31%;
+			
+		}
+
+		.cardSelfCare div:nth-child(4) span{
+			color: var(--Pale-blue);
+			position: absolute;
+			top: 71%;
+			left: 15%;
+		}
+
+		.cardSelfCare span:nth-child(1){
+			position: absolute;
+			top: 11%;
+			left: 15%;
+		}
+
+		.cardSelfCare #selfId h1{
+			position: absolute;
+			top: 45%;
+			left: 15%;
+		}
+
+		.cardSelfCare svg{
+			position: absolute;
+			left: 75%;
+			color: var(--Pale-blue);
+			top: 13%;
+		}
+
+		.top{
+			height: 10rem;
+		}
+
+		.top div{
+			margin-top: -15%;
+		}
+
+		.bottom{
+			height: 10rem;
+		}
+
+		.bottom:nth-child(5) div{
+			margin-top: -16%;
+		}
+
+		.bottom:nth-child(6) div{
+			margin-top: -3%;
+		}
+
+
+
+}

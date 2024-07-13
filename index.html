@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="content">
+      <div class="report">
+        <div class="Jeremy">
+          <div class="JeremyContent">
+            <img src="images/image-jeremy.png" alt="image-jeremy">
+            <div class="name">
+              <span>Report for</span>
+              <h1>Jeremy Robson</h1>  
+            </div>
+              
+          </div> 
+        </div>  
+          
+        <div class="time">
+          <ul>
+            <li id="dailybtn"> Daily </li>
+            <li id="weeklybtn"> Weekly </li>
+            <li id="monthlybtn"> Monthly  </li>
+          </ul>    
+        </div>
+        
+      </div>  
+      
+<div class="cards">
+    <div class="cardWorkBg top"><img src="images/icon-work.svg" alt="icon-work">
+      <div class="cardWork">
+        <span>Work</span>
+        <svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentColor" fill-rule="evenodd"/></svg>
+        
+          <div id="workId"></div>
+          <div id="workPrevious"></div>
+        
+      </div>  
+    </div>
+      
+    <div class="cardPlayBg top"><img src="images/icon-play.svg" alt="icon-play">
+      <div class="cardPlay">
+        <span>Play</span>
+        <svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentColor" fill-rule="evenodd"/></svg>
+        <div id="playId"></div>
+        <div id="playPrevious"></div>
+      </div>  
+    </div>
+    
+    <div class="cardStudyBg top"><img src="images/icon-study.svg" alt="icon-study">
+      <div class="cardStudy">
+        <span>Study</span>
+        <svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentColor" fill-rule="evenodd"/></svg>
+        <div id="studyId"></div>
+        <div id="studyPrevious"></div>
+      </div>  
+    </div>
+    
+    <div class="cardExerciseBg bottom"><img src="images/icon-exercise.svg" alt="icon-exercise">
+      <div class="cardExercise">
+        <span>Exercise</span>
+        <svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentColor" fill-rule="evenodd"/></svg>
+        <div id="exerciseId"></div>
+        <div id="exercisePrevious"></div>
+      </div>  
+    </div>
+    
+    <div class="cardSocialBg bottom"><img src="images/icon-social.svg" alt="icon-social">
+      <div class="cardSocial">
+        <span>Social</span>
+        <svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentColor" fill-rule="evenodd"/></svg>
+        <div id="socialId"></div>
+        <div id="socialPrevious"></div>
+      </div>  
+    </div>
+    
+    <div class="cardSelfCareBg bottom"><img src="images/icon-self-care.svg" alt="icon-self-care">
+      <div class="cardSelfCare">
+        <span>Self Care</span>
+        <svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentColor" fill-rule="evenodd"/></svg>
+        <div id="selfId"></div>
+        <div id="selfPrevious"></div>
+      </div>  
+    </div>
+    
+  
+</div>
+  
+    </div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+  <script src="script.js"></script>
+</body>
+</html>
